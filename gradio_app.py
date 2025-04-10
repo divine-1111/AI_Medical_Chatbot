@@ -5,7 +5,6 @@ from brain_doctor import encode_image, analyze_image_with_query
 from voice_patient import record_audio, transcribe_with_groq
 from voice_doctor import text_to_speech_with_gtts, text_to_speech_with_elevenlabs
 
-#load_dotenv()
 
 system_prompt="""You have to act as a professional doctor, i know you are not but this is for learning purpose. 
             What's in this image?. Do you find anything wrong with it medically? 
