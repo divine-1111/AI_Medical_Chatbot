@@ -26,7 +26,7 @@ def process_inputs(audio_filepath, image_filepath):
     else:
         doctor_response = "No image provided for me to analyze"
 
-    voice_of_doctor = text_to_speech_with_elevenlabs(input_text=doctor_response, output_filepath="final.mp3") 
+    voice_of_doctor = text_to_speech_with_gtts(input_text=doctor_response, output_filepath="final.mp3") 
 
     return speech_to_text_output, doctor_response, voice_of_doctor
 
@@ -46,4 +46,4 @@ iface = gr.Interface(
     title="AI Doctor with Vision and Voice"
 )
 
-iface.launch(debug=True, share=True)
+iface.launch(debug=True)
